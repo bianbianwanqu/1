@@ -2,7 +2,7 @@
 
 [move]
 version = 0
-manifest_digest = "0D8EF216C51AB8B04C21EC259D44A62B3CC963E512B0CFB3583CAD33735DA5C1"
+manifest_digest = "9010232CD5ABA19CB18E29E76EB78C3065BED6F0B125A3966D3E184EFAFDEFDA"
 deps_digest = "F8BBB0CCB2491CA29A3DF03D6F92277A4F3574266507ACD77214D37ECA3F3082"
 
 dependencies = [
@@ -11,18 +11,18 @@ dependencies = [
 
 [[move.package]]
 name = "MoveStdlib"
-source = { git = "https://github.com/MystenLabs/sui.git", rev = "mainnet", subdir = "crates/sui-framework/packages/move-stdlib" }
+source = { git = "https://github.com/MystenLabs/sui.git", rev = "testnet-v1.29.2", subdir = "crates/sui-framework/packages/move-stdlib" }
 
 [[move.package]]
 name = "Sui"
-source = { git = "https://github.com/MystenLabs/sui.git", rev = "mainnet", subdir = "crates/sui-framework/packages/sui-framework" }
+source = { git = "https://github.com/MystenLabs/sui.git", rev = "testnet-v1.29.2", subdir = "crates/sui-framework/packages/sui-framework" }
 
 dependencies = [
   { name = "MoveStdlib" },
 ]
 
 [move.toolchain-version]
-compiler-version = "1.27.2"
+compiler-version = "1.29.2"
 edition = "2024.beta"
 flavor = "sui"
 
@@ -32,4 +32,10 @@ flavor = "sui"
 chain-id = "35834a8a"
 original-published-id = "0xd5cd31f4bf84a2c280c9ed20cbb20345cbe5c1ebe63014c406f97b20edd4ac63"
 latest-published-id = "0xd5cd31f4bf84a2c280c9ed20cbb20345cbe5c1ebe63014c406f97b20edd4ac63"
+published-version = "1"
+
+[env.baku]
+chain-id = "db4b6646"
+original-published-id = "0xd95ac41e80467050c0e4fdc4c3fc3aec390f053df41e1a0446d5605843ad6619"
+latest-published-id = "0xd95ac41e80467050c0e4fdc4c3fc3aec390f053df41e1a0446d5605843ad6619"
 published-version = "1"
